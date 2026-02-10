@@ -18,28 +18,54 @@ st.set_page_config(
 # Custom CSS
 st.markdown("""
     <style>
+    /* Force light theme */
+    .stApp {
+        background-color: white;
+        color: #262730;
+    }
+    
+    /* Sidebar light theme */
+    [data-testid="stSidebar"] {
+        background-color: #f0f2f6;
+    }
+    
+    /* Metrics light theme */
+    [data-testid="stMetricValue"] {
+        color: #262730;
+    }
+    
     .main {
         padding: 0rem 1rem;
+        background-color: white;
     }
+    
     .metric-card {
         background-color: #f0f2f6;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
+    
     .stMetric {
         background-color: white;
         padding: 15px;
         border-radius: 8px;
         box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     }
+    
     h1 {
         color: #2e7d32;
         padding-bottom: 10px;
         border-bottom: 3px solid #4caf50;
     }
+    
     h2 {
         color: #1b5e20;
+    }
+    
+    /* DataFrames */
+    .dataframe {
+        background-color: white !important;
     }
     </style>
     """, unsafe_allow_html=True)
